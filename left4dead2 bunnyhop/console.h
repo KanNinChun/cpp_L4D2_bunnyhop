@@ -6,7 +6,6 @@
 // Set console color Document
 // https://stackoverflow.com/questions/20608058/c-colour-console-text
 
-//------------------------ console stuff-------------------//
 void change_color(const int color_flags)
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -41,7 +40,23 @@ void hideConsole()
 		
 	}
 }
-//------------------------ End---------------------------//
+
+inline std::string Randomtitle(size_t length)
+{
+	std::string r;
+	static const char bet[] = { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890/*-+!@#$%^&*" };
+	srand((unsigned)time(NULL) * 5);
+	for (int i = 0; i < length; ++i)
+	{
+		r += bet[rand() % (sizeof(bet) - 1)];
+	}
+	return r;
+}
+
+void setTitle()
+{
+	SetConsoleTitleA(Randomtitle(26).c_str());
+}
 
 // Center Console Code and set topmost
 //int posx = GetSystemMetrics(SM_CXSCREEN) / 2 - width / 2;

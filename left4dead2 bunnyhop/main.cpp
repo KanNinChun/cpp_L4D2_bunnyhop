@@ -38,7 +38,7 @@ int main()
 
 	while (true)
 	{
-		
+		setTitle();
 		hideConsole();
 		if (GetKeyState(VK_NUMPAD1) & 1)
 		{
