@@ -1,6 +1,4 @@
-#include<iostream>
-#include<Windows.h>
-#include <time.h>
+#include"console.h"
 
 using namespace std;
 
@@ -15,30 +13,12 @@ using namespace std;
 // Key location	101/102 Enhanced keyboard	Scan 1 make	 Scan 1 break
 //      61			      Space Bar				39			 B9
 
-// Set console color Document
-// https://stackoverflow.com/questions/20608058/c-colour-console-text
-
-//------------------------ console stuff-------------------//
-void change_color(const int color_flags)
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, color_flags);
-}
-
-template <class T>
-void print_colored(const int color_flags, const T& arg)
-{
-	change_color(color_flags);
-	std::cout << arg << std::endl;;
-	change_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);//back to normal
-}
-//------------------------ End---------------------------//
-
 const char* handle_name{ "Left 4 Dead 2 - Direct3D 9" };
 const HWND  Game_handle{ FindWindowA(NULL, handle_name) };
 
 int main()
 {
+	console(750, 180);
 	if (!Game_handle) 
 	{
 		MessageBoxA(NULL, "Please Start Left 4 Dead 2 first ...", "Error Message", MB_ICONERROR | MB_OK);
@@ -49,14 +29,17 @@ int main()
 		std::cout << "Game Handle Found"						 << std::endl;
 		std::cout												 << std::endl;
 		std::cout << "Press Numpad 1 to enable/disable Bunnyhop" << std::endl;
+		std::cout << "Press Numpad 2 to hide/show console"		 << std::endl;
 		std::cout												 << std::endl;
 		print_colored(FOREGROUND_RED,"Tip:");
 		std::cout << "if you want , you can open game console and type cl_showpos 1 to show velocity" << std::endl;
-		
+		Beep(330, 100);
 	}
 
 	while (true)
 	{
+		
+		hideConsole();
 		if (GetKeyState(VK_NUMPAD1) & 1)
 		{
 			if (GetAsyncKeyState(VK_SPACE))

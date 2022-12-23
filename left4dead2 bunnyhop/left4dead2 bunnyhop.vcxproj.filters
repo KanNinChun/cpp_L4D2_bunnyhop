@@ -19,4 +19,9 @@
       <Filter>資源檔</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="console.h">
+      <Filter>資源檔</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
