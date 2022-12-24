@@ -28,7 +28,7 @@ void console(int width = 750, int height = 180) // Default value
 
 void hideConsole()
 {
-	if (GetKeyState(VK_NUMPAD3) & 1)
+	if (GetKeyState(VK_NUMPAD2) & 1)
 	{
 		ShowWindow(GetConsoleWindow(), SW_HIDE);
 

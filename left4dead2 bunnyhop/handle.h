@@ -15,8 +15,7 @@ bool check_handle(const HWND Game_handle)
 		std::cout << "Game Handle Found" << std::endl;
 		std::cout << std::endl;
 		std::cout << "Press Numpad 1 to enable/disable Bunnyhop" << std::endl;
-		std::cout << "Press Numpad 2 to enable/disable rapid fire" << std::endl;
-		std::cout << "Press Numpad 3 to hide/show console" << std::endl;
+		std::cout << "Press Numpad 2 to hide/show console" << std::endl;
 		std::cout << std::endl;
 		print_colored(FOREGROUND_RED, "Tip:");
 		std::cout << "if you want , you can open game console and type cl_showpos 1 to show velocity" << std::endl;
