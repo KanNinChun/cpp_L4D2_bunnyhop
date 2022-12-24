@@ -23,13 +23,12 @@ void print_colored(const int color_flags, const T& arg)
 void console(int width = 750, int height = 180) // Default value
 {
 	HWND console = GetConsoleWindow();
-	SetConsoleTitleA("l4d2 bh");
 	MoveWindow(console, 0, 0, width, height, TRUE);
 }
 
 void hideConsole()
 {
-	if (GetKeyState(VK_NUMPAD2) & 1)
+	if (GetKeyState(VK_NUMPAD3) & 1)
 	{
 		ShowWindow(GetConsoleWindow(), SW_HIDE);
 
@@ -57,6 +56,8 @@ void setTitle()
 {
 	SetConsoleTitleA(Randomtitle(26).c_str());
 }
+
+
 
 // Center Console Code and set topmost
 //int posx = GetSystemMetrics(SM_CXSCREEN) / 2 - width / 2;
