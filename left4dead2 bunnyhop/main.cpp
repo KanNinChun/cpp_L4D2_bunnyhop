@@ -26,6 +26,7 @@ int main()
 		setTitle();
 		hideConsole();
 		bunnyhop(Game_handle);
+		autopistol();
 		Sleep(1); // Add Sleep to optimize the CPU useage
 	}
 	return 0;
