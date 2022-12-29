@@ -20,7 +20,7 @@ void print_colored(const int color_flags, const T& arg)
 	change_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);//back to normal
 }
 
-void console(int width = 750, int height = 180) // Default value
+void console(int width, int height)
 {
 	HWND console = GetConsoleWindow();
 	MoveWindow(console, 0, 0, width, height, TRUE);
@@ -56,11 +56,3 @@ void setTitle()
 {
 	SetConsoleTitleA(Randomtitle(26).c_str());
 }
-
-
-
-// Center Console Code and set topmost
-//int posx = GetSystemMetrics(SM_CXSCREEN) / 2 - width / 2;
-//int posy = GetSystemMetrics(SM_CYSCREEN) / 2 - height / 2;
-//MoveWindow(console, posx, posy, width, height, TRUE);
-//SetWindowPos(console, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);

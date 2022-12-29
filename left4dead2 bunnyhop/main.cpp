@@ -6,16 +6,8 @@ using namespace std;
 // Reference video
 // https://www.youtube.com/watch?v=A5kSHtROX1c 
 
-// SendMessageA Document
-// https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendmessage
-
-// SendMessageA LPARAM 0x390000 Document
-// https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#keystroke-message-flags
-// Key location	101/102 Enhanced keyboard	Scan 1 make	 Scan 1 break
-//      61			      Space Bar				39			 B9
-
-const char* handle_name{ "Left 4 Dead 2 - Direct3D 9" };
-const HWND  Game_handle{ FindWindowA(NULL, handle_name) };
+const char* handle_name { "Left 4 Dead 2 - Direct3D 9" };
+const HWND  Game_handle { FindWindowA(NULL, handle_name) };
 
 int main()
 {
@@ -31,5 +23,3 @@ int main()
 	}
 	return 0;
 }
-
-//Discord: Hippo#6524

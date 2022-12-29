@@ -21,6 +21,8 @@ bool check_handle(const HWND Game_handle)
 		print_colored(FOREGROUND_RED, "Tip:");
 		std::cout << "Open game console and type cl_showpos 1 to show velocity..." << std::endl;
 		std::cout << "Please notice that you can not bhoping and autopistol at the same time..." << std::endl;
+		std::cout << std::endl;
+		print_colored(FOREGROUND_GREEN, "Contact: Hippo#6524");
 		Beep(330, 100);
 		return true;
 	}
