@@ -3,7 +3,7 @@
 
 bool check_handle(const HWND Game_handle)
 {
-	console(750, 180);
+	console(750, 250);
 	if (!Game_handle)
 	{
 		MessageBoxA(NULL, "Please Start Left 4 Dead 2 first ...", "Error Message", MB_ICONERROR | MB_OK);
