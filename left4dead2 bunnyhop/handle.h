@@ -1,17 +1,10 @@
 #pragma once
 #include"console.h"
 
-bool check_handle(const HWND Game_handle)
+bool Menu()
 {
-	console(750, 250);
-	if (!Game_handle)
-	{
-		MessageBoxA(NULL, "Please Start Left 4 Dead 2 first ...", "Error Message", MB_ICONERROR | MB_OK);
-		exit(-1);
-		return false;
-	}
-	else
-	{
+		console(750, 250);
+
 		std::cout << "Game Handle Found" << std::endl;
 		std::cout << std::endl;
 		std::cout << "Press mouse side button (XBUTTON 1) to use auto pistol" << std::endl;
@@ -25,5 +18,4 @@ bool check_handle(const HWND Game_handle)
 		print_colored(FOREGROUND_GREEN, "Contact: Hippo#6524");
 		Beep(330, 100);
 		return true;
-	}
 }
